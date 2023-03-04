@@ -23,7 +23,7 @@
         </div>
         <br>
         <button type="button" onclick= "saveSnap();">Save</button> <br>
-        <a href="/dataimage"><button type="button" name="button">Database Image</button></a>
+        <a href="/rekapimage"><button type="button" name="button">Database Image</button></a>
     </div>
     
     <script type="text/javascript" src="assets/webcam.min.js">
@@ -54,9 +54,6 @@
        });
     }
     </script>
-
-   
-
     <style>
         .content{
             padding-top: 10px;
@@ -65,16 +62,19 @@
     <div class="content">
     
     </div>
-
+    
+    <br>
 </body>
 </html>
 
 
 <form action="{{ url('/store') }}" method="post" enctype="multipart/form-data">
 @csrf
-Upload Image: <input type="file" name="profile_image"/>
+Upload Image: <input type="file" src="img/" name="profile_image"/>
 <p><button type="submit" class="btn btn-default">Submit</button></p>
 </form>
+
+
 
 
 

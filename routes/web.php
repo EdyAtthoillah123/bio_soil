@@ -17,9 +17,10 @@ use App\Http\Controllers\image_controller;
 
 Route::get('/', [image_controller::class, 'index']);
 Route::post('/store', [image_controller::class, 'store']);
+Route::get('/dataimages', [image_controller::class, 'imagesave']);
 
-Route::get('/dataimages', function() {
-    return view('function');
+Route::get('/rekapimage', function() {
+    return view('rekapimage');
 });
 
 // Route::get('/', function () {
